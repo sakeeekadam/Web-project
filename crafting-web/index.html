@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icons" href="./images/logo1.jpg">
+  <title>Hearts & Hues</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Image quality fixes only */
+    .gallery-grid .image-box {
+      aspect-ratio: 4/3;
+      overflow: hidden;
+    }
+
+    .gallery-grid .image-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background-color: #f8f8f8;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <a href="./images/logo1.jpg"><img src="./images/logo1.jpg" alt="Logo"></a>
+    <nav class="navbar">
+      <a href="#home">Home</a>
+      <a href="#gallery">My Gallery</a>
+      <a href="#contact">Contact</a>
+      <a href="#suggestions">Suggestions</a>
+    </nav>
+    <div class="icons">
+      <a href="likes.html"><i class="fa-solid fa-heart"></i></a>
+      <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+      <a href="orders.html"><i class="fa-solid fa-box"></i></a>
+      <a href="profile.html"><i class="fa-solid fa-user"></i></a>
+    </div>
+  </header>
+
+  <!-- Home Section -->
+  <section class="home" id="home">
+    <div class="content">
+      <h1>Hearts & Hues</h1>
+      <h5>A celebration of love and colors</h5>
+      <pre>
+Welcome to our small world of handmade crafts!
+Each item is uniquely designed with care and creativity
+to make your gift innovative. Handcrafted wedding decor & gifts,
+designed to match your love in every color.
+From invites to decor — every detail handcrafted with a personal touch.
+      </pre>
+     <a href="#gallery"><button>Explore Us</button></a> 
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="gallery" id="gallery">
+    <h1>Our Creative Gallery</h1>
+    <div class="slider-container">
+      <!-- Page 1 -->
+      <div class="slide">
+        <h2>Frames</h2>
+        <div class="gallery-grid">
+          <div class="image-box">
+            <img src="./images/wed1.jpg" alt="Wedding Frame 1">
+            <div class="overlay">
+              <button class="add-to-cart" data-product-id="1">Add to Cart</button>
+              <a href="checkout.html?orderNow=1"><button class="order-now" data-product-id="1">Order Now</button></a>
+              <button class="like-btn" data-product-id="1">
+                <i class="fas fa-heart"></i>
+              </button>
+            </div>
+          </div>
+          <div class="image-box">
+            <img src="./images/wed2.jpg" alt="Wedding Frame 2">
+            <div class="overlay">
+              <button class="add-to-cart" data-product-id="2">Add to Cart</button>
+              <button class="order-now" data-product-id="2">Order Now</button>
+              <button class="like-btn" data-product-id="2">
+                <i class="fas fa-heart"></i>
+              </button>
+            </div>
+          </div>
+          <div class="image-box">
+            <img src="./images/frame1.jpg" alt="Photo Frame">
+            <div class="overlay">
+              <button class="add-to-cart" data-product-id="3">Add to Cart</button>
+              <button class="order-now" data-product-id="3">Order Now</button>
+              <button class="like-btn" data-product-id="3">
+                <i class="fas fa-heart"></i>
+              </button>
+            </div>
+          </div>
+          <div class="image-box">
+            <img src="./images/nameplate1.jpg" alt="Nameplate">
+            <div class="overlay">
+              <button class="add-to-cart" data-product-id="4">Add to Cart</button>
+              <button class="order-now" data-product-id="4">Order Now</button>
+              <button class="like-btn" data-product-id="4">
+                <i class="fas fa-heart"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Page 2 -->
+      <div class="slide">
+        <h2>Sapatpati Supari</h2>
+        <div class="gallery-grid">
+          <div class="image-box">
+            <img src="./images/supari1.jpg" alt="Supari Box 1">
+            <div class="overlay">
+              <button class="add-to-cart" data-product-id="5">Add to Cart</button>
+              <button class="order-now" data-product-id="5">Order Now</button>
+              <button class="like-btn" data-product-id="5">
+                <i class="fas fa-heart"></i>
+              </button>
+            </div>
+          </div>
+          <div class="image-box">
+            <img src="./images/supari2.jpg" alt="Supari Box 2">
+            <div class="overlay">
+              <button class="add-to-cart" data-product-id="6">Add to Cart</button>
+              <button class="order-now" data-product-id="6">Order Now</button>
+              <button class="like-btn" data-product-id="6">
+                <i class="fas fa-heart"></i>
+              </button>
+            </div>
+          </div>
+          <div class="image-box">
+            <img src="./images/supari3.jpg" alt="Supari Box 3">
+            <div class="overlay">
+              <button class="add-to-cart" data-product-id="7">Add to Cart</button>
+              <button class="order-now" data-product-id="7">Order Now</button>
+              <button class="like-btn" data-product-id="7">
+                <i class="fas fa-heart"></i>
+              </button>
+            </div>
+          </div>
+          <div class="image-box">
+            <img src="./images/supari4.jpg" alt="Supari Box 4">
+            <div class="overlay">
+              <button class="add-to-cart" data-product-id="8">Add to Cart</button>
+              <button class="order-now" data-product-id="8">Order Now</button>
+              <button class="like-btn" data-product-id="8">
+                <i class="fas fa-heart"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Page 3 -->
+      <div class="slide">
+        <h2>Platters</h2>
+        <div class="gallery-grid">
+          <div class="image-box">
+            <img src="./images/plate1.jpg" alt="Platter 1">
+            <div class="overlay">
+              <button class="add-to-cart" data-product-id="9">Add to Cart</button>
+              <button class="order-now" data-product-id="9">Order Now</button>
+              <button class="like-btn" data-product-id="9">
+                <i class="fas fa-heart"></i>
+              </button>
+            </div>
+          </div>
+          <div class="image-box">
+            <img src="./images/plate2.jpg" alt="Platter 2">
+            <div class="overlay">
+              <button class="add-to-cart" data-product-id="10">Add to Cart</button>
+              <button class="order-now" data-product-id="10">Order Now</button>
+              <button class="like-btn" data-product-id="10">
+                <i class="fas fa-heart"></i>
+              </button>
+            </div>
+          </div>
+          <div class="image-box">
+            <img src="./images/plate3.jpg" alt="Platter 3">
+            <div class="overlay">
+              <button class="add-to-cart" data-product-id="11">Add to Cart</button>
+              <button class="order-now" data-product-id="11">Order Now</button>
+              <button class="like-btn" data-product-id="11">
+                <i class="fas fa-heart"></i>
+              </button>
+            </div>
+          </div>
+          <div class="image-box">
+            <img src="./images/plate4.jpg" alt="Platter 4">
+            <div class="overlay">
+              <button class="add-to-cart" data-product-id="12">Add to Cart</button>
+              <button class="order-now" data-product-id="12">Order Now</button>
+              <button class="like-btn" data-product-id="12">
+                <i class="fas fa-heart"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Us Section -->
+  <section class="contact" id="contact">
+    <div class="contact-wrapper">
+      <div class="contact-info">
+        <div class="box">
+          <i class="fas fa-map-marker-alt"></i>
+          <h4>OUR MAIN OFFICE</h4>
+          <p>Vita <br>Sangli ,Maharashtra</p>
+        </div>
+        <div class="box">
+          <i class="fas fa-phone-alt"></i>
+          <h4>PHONE NUMBER</h4>
+          <p>7414903924</p>
+        </div>
+        <div class="box">
+            <i class="fa-brands fa-square-instagram"></i>
+          <h4>INSTAGRAM</h4>
+          <p>_heart&hues</p>
+        </div>
+        <div class="box">
+          <i class="fas fa-envelope"></i>
+          <h4>EMAIL</h4>
+          <p><a href="sakshiasha04@gmail.com">sakshiasha04@gmail.com</a></p>
+        </div>
+      </div>
+      <div class="contact-form">
+        <h2>Contact Us</h2>
+        <form id="contact-form" novalidate>
+          <div class="form-group">
+            <input type="text" id="contact-name" placeholder="Enter your Name" minlength="2" required>
+            <span class="error-message" id="contact-name-error"></span>
+          </div>
+          <div class="form-group">
+            <input type="tel" id="contact-phone" placeholder="Enter the mobile no." pattern="[0-9]{10}" maxlength="10" required>
+            <span class="error-message" id="contact-phone-error"></span>
+          </div>
+          <div class="form-group">
+            <input type="text" id="contact-address" placeholder="Enter your address" required>
+            <span class="error-message" id="contact-address-error"></span>
+          </div>
+          <div class="form-group">
+            <textarea id="contact-message" placeholder="Enter your message" required></textarea>
+            <span class="error-message" id="contact-message-error"></span>
+          </div>
+          <div class="form-group">
+            <input type="file" id="contact-file" required>
+            <span class="error-message" id="contact-file-error"></span>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- suggestions -->
+  <section class="suggestions" id="suggestions">
+    <div class="suggestion-wrapper">
+      <div class="suggestion-content">
+        <h2>Share Your Crafty Ideas 💡</h2>
+        <p>We love hearing from our creative community! Share your suggestions or innovative ideas that could inspire our next handcrafted collection.</p>
+      </div>
+      <form id="suggestion-form" class="suggestion-form" novalidate>
+        <div class="form-group">
+          <input type="text" id="suggestion-name" placeholder="Your Name" minlength="2" required>
+          <span class="error-message" id="suggestion-name-error"></span>
+        </div>
+        <div class="form-group">
+          <input type="email" id="suggestion-email" placeholder="Your Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+          <span class="error-message" id="suggestion-email-error"></span>
+        </div>
+        <div class="form-group">
+          <input type="tel" id="suggestion-phone" placeholder="Your Mobile Number" pattern="[0-9]{10}" maxlength="10" required>
+          <span class="error-message" id="suggestion-phone-error"></span>
+        </div>
+        <div class="form-group">
+          <textarea id="suggestion-message" placeholder="Suggest something unique or share your vision..." rows="5" required></textarea>
+          <span class="error-message" id="suggestion-message-error"></span>
+        </div>
+        <div class="form-group">
+          <label class="upload-label">Upload Image (optional)</label>
+          <input type="file" id="suggestion-image" accept="image/*">
+          <span class="error-message" id="suggestion-image-error"></span>
+        </div>
+        <button type="submit">Submit Idea</button>
+      </form>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+  <style>
+    .form-group {
+      position: relative;
+      margin-bottom: 1.5rem;
+    }
+
+    .error-message {
+      color: #ff4444;
+      font-size: 12px;
+      position: absolute;
+      bottom: -20px;
+      left: 0;
+      display: none;
+    }
+
+    input:invalid:not(:focus):not(:placeholder-shown),
+    textarea:invalid:not(:focus):not(:placeholder-shown) {
+      border-color: #ff4444;
+    }
+
+    input:valid:not(:placeholder-shown),
+    textarea:valid:not(:placeholder-shown) {
+      border-color: #4CAF50;
+    }
+  </style>
+</body>
+</html>

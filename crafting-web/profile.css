@@ -1,0 +1,271 @@
+/* Profile Page Styles */
+.profile-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.profile-logo {
+    width: 150px;
+    margin-bottom: 1rem;
+}
+
+.profile-header h1 {
+    color: #333;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.profile-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    position: relative;
+}
+
+.profile-avatar {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.avatar-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #f5f7fa;
+}
+
+.avatar-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#defaultAvatar {
+    font-size: 6rem;
+    color: #4a90e2;
+}
+
+#profileImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.avatar-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 8px;
+    transform: translateY(100%);
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.avatar-container:hover .avatar-overlay {
+    transform: translateY(0);
+}
+
+.upload-btn,
+.remove-btn {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    font-size: 0.9rem;
+    background: none;
+    border: none;
+    width: 100%;
+    padding: 4px;
+    transition: background-color 0.3s;
+}
+
+.upload-btn:hover,
+.remove-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.remove-btn {
+    color: #ff4444;
+}
+
+.upload-btn i,
+.remove-btn i {
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+}
+
+.profile-info {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.info-group {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.info-group:last-child {
+    border-bottom: none;
+}
+
+.info-group label {
+    display: block;
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.info-group label i {
+    margin-right: 8px;
+    color: #4a90e2;
+}
+
+.info-group p {
+    color: #333;
+    font-size: 1.1rem;
+    margin: 0;
+    padding-left: 24px;
+}
+
+.edit-input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 2px solid #e1e1e1;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-top: 8px;
+    transition: border-color 0.3s;
+}
+
+.edit-input:focus {
+    border-color: #4a90e2;
+    outline: none;
+}
+
+textarea.edit-input {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.profile-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.home-btn,
+.logout-btn,
+.edit-btn,
+.save-btn,
+.cancel-btn {
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s;
+    text-decoration: none;
+    border: none;
+}
+
+.home-btn {
+    background: #4a90e2;
+    color: white;
+}
+
+.logout-btn {
+    background: #ff4444;
+    color: white;
+}
+
+.edit-btn {
+    background: #28a745;
+    color: white;
+}
+
+.save-btn {
+    background: #28a745;
+    color: white;
+}
+
+.cancel-btn {
+    background: #6c757d;
+    color: white;
+}
+
+.home-btn:hover,
+.logout-btn:hover,
+.edit-btn:hover,
+.save-btn:hover,
+.cancel-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.home-btn:hover {
+    background: #357abd;
+}
+
+.logout-btn:hover {
+    background: #ff1111;
+}
+
+.edit-btn:hover,
+.save-btn:hover {
+    background: #218838;
+}
+
+.cancel-btn:hover {
+    background: #5a6268;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .profile-card {
+        padding: 1.5rem;
+    }
+
+    .avatar-container {
+        width: 120px;
+        height: 120px;
+    }
+
+    #defaultAvatar {
+        font-size: 4rem;
+    }
+
+    .profile-actions {
+        flex-direction: column;
+    }
+
+    .home-btn,
+    .logout-btn,
+    .edit-btn,
+    .save-btn,
+    .cancel-btn {
+        width: 100%;
+        justify-content: center;
+    }
+} 

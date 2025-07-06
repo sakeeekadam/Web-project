@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Hearts & Hues</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="./images/logo1.jpg"><img src="./images/logo1.jpg" alt="Logo"></a>
+    <nav class="navbar">
+      <a href="#home">Home</a>
+      <a href="#gallery">My Gallery</a>
+      <a href="#contact">Contact</a>
+      <a href="#suggestions">Suggestions</a>
+    </nav>
+    <div class="icons">
+      <a href="likes.html"><i class="fa-solid fa-heart"></i></a>
+      <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+      <a href="orders.html"><i class="fa-solid fa-box"></i></a>
+      <a href="profile.html"><i class="fa-solid fa-user"></i></a>
+    </div>
+    </header>
+
+    <!-- Cart Section -->
+    <section class="cart-section">
+        <div class="cart-container">
+            <h1>Your Shopping Cart</h1>
+            <div id="cart-items">
+                <!-- Cart items will be dynamically added here -->
+            </div>
+            <div class="cart-summary">
+                <div class="subtotal">
+                    <span>Subtotal:</span>
+                    <span id="cart-subtotal">₹0.00</span>
+                </div>
+                <div class="shipping">
+                    <span>Shipping:</span>
+                    <span>₹50.00</span>
+                </div>
+                <div class="total">
+                    <span>Total:</span>
+                    <span id="cart-total">₹0.00</span>
+                </div>
+                <button id="checkout-btn" class="checkout-button">Proceed to Checkout</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script>
+        // Cart page specific JavaScript
+        document.addEventListener('DOMContentLoaded', () => {
+            displayCartItems();
+        });
+
+        function displayCartItems() {
+            const cartItemsContainer = document.getElementById('cart-items');
+            const savedCart = localStorage.getItem('cart');
+            
+            if (savedCart) {
+                const cart = JSON.parse(savedCart);
+                let subtotal = 0;
+
+                if (cart.length === 0) {
+                    cartItemsContainer.innerHTML = '<p class="empty-cart">Your cart is empty</p>';
+                    return;
+                }
+
+                cartItemsContainer.innerHTML = cart.map((item) => {
+                    subtotal += item.price;
+                    return `
+                        <div class="cart-item">
+                            <img src="${item.image}" alt="${item.name}">
+                            <div class="item-details">
+                                <h3>${item.name}</h3>
+                                <p class="price">₹${item.price}</p>
+                            </div>
+                            <div class="item-actions">
+                                <button class="remove-btn" data-cart-id="${item.cartId}">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                                <button class="like-btn ${likes.includes(item.id) ? 'liked' : ''}" data-product-id="${item.id}">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+
+                // Update totals
+                document.getElementById('cart-subtotal').textContent = `₹${subtotal}`;
+                document.getElementById('cart-total').textContent = `₹${subtotal + 50}`; // Adding shipping
+
+                // Setup buttons
+                setupProductButtons();
+            } else {
+                cartItemsContainer.innerHTML = '<p class="empty-cart">Your cart is empty</p>';
+            }
+        }
+
+        document.getElementById('checkout-btn').addEventListener('click', () => {
+            const savedCart = localStorage.getItem('cart');
+            if (savedCart && JSON.parse(savedCart).length > 0) {
+                window.location.href = 'checkout.html';
+            } else {
+                showNotification('Your cart is empty!');
+            }
+        });
+    </script>
+</body>
+</html> 

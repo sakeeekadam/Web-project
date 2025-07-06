@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - H&H Crafts</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <div class="profile-container">
+        <div class="profile-header">
+            <img src="images/LOGO.png" alt="H&H Crafts Logo" class="profile-logo">
+            <h1>My Profile</h1>
+        </div>
+        <div class="profile-card">
+            <div class="profile-avatar">
+                <div class="avatar-container">
+                    <div class="avatar-image">
+                        <i id="defaultAvatar" class="fas fa-user-circle"></i>
+                        <img id="profileImage" src="" alt="Profile Picture" style="display: none;">
+                    </div>
+                    <div class="avatar-overlay">
+                        <label for="avatarUpload" class="upload-btn">
+                            <i class="fas fa-camera"></i>
+                            <span>Change Photo</span>
+                        </label>
+                        <button type="button" id="removePhotoBtn" class="remove-btn" style="display: none;">
+                            <i class="fas fa-trash"></i>
+                            <span>Remove Photo</span>
+                        </button>
+                        <input type="file" id="avatarUpload" accept="image/*" style="display: none;">
+                    </div>
+                </div>
+            </div>
+            <div class="profile-info">
+                <div class="info-group">
+                    <label><i class="fas fa-user"></i> Full Name</label>
+                    <p id="fullName">Loading...</p>
+                </div>
+                <div class="info-group editable">
+                    <label><i class="fas fa-envelope"></i> Email</label>
+                    <p id="email">Loading...</p>
+                    <input type="email" id="emailInput" class="edit-input" style="display: none;">
+                </div>
+                <div class="info-group editable">
+                    <label><i class="fas fa-phone"></i> Phone</label>
+                    <p id="phone">Loading...</p>
+                    <input type="tel" id="phoneInput" class="edit-input" style="display: none;" pattern="[0-9]{10}">
+                </div>
+                <div class="info-group editable">
+                    <label><i class="fas fa-home"></i> Address</label>
+                    <p id="address">Loading...</p>
+                    <textarea id="addressInput" class="edit-input" style="display: none;"></textarea>
+                </div>
+            </div>
+            <div class="profile-actions">
+                <button id="editProfileBtn" class="edit-btn"><i class="fas fa-edit"></i> Edit Profile</button>
+                <button id="saveProfileBtn" class="save-btn" style="display: none;"><i class="fas fa-save"></i> Save Changes</button>
+                <button id="cancelEditBtn" class="cancel-btn" style="display: none;"><i class="fas fa-times"></i> Cancel</button>
+                <a href="index.html" class="home-btn"><i class="fas fa-home"></i> Home</a>
+                <button id="logoutBtn" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</button>
+            </div>
+        </div>
+    </div>
+    <script src="profile.js"></script>
+</body>
+</html> 

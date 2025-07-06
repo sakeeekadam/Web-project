@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - H&H Crafts</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <div class="register-container">
+        <img src="images/LOGO.png" alt="H&H Crafts Logo" class="logo">
+        <h1 class="register-title">Create Account</h1>
+        <form id="registerForm" onsubmit="return validateRegistration(event)">
+            <div class="name-row">
+                <div class="input-group">
+                    <label for="firstName">First Name<span class="required">*</span></label>
+                    <i class="fas fa-user"></i>
+                    <input type="text" class="input-field" id="firstName" required>
+                </div>
+                <div class="input-group">
+                    <label for="middleName">Middle Name<span class="required">*</span></label>
+                    <i class="fas fa-user"></i>
+                    <input type="text" class="input-field" id="middleName" required>
+                </div>
+                <div class="input-group">
+                    <label for="lastName">Last Name<span class="required">*</span></label>
+                    <i class="fas fa-user"></i>
+                    <input type="text" class="input-field" id="lastName" required>
+                </div>
+            </div>
+            <div class="input-group">
+                <label for="phone">Phone Number<span class="required">*</span></label>
+                <i class="fas fa-phone"></i>
+                <input type="tel" class="input-field" id="phone" required pattern="[0-9]{10}" placeholder="10 digit number">
+            </div>
+            <div class="input-group">
+                <label for="email">Email Address<span class="required">*</span></label>
+                <i class="fas fa-envelope"></i>
+                <input type="email" class="input-field" id="email" required>
+            </div>
+            <div class="input-group">
+                <label for="address">Address</label>
+                <i class="fas fa-home"></i>
+                <input type="text" class="input-field" id="address">
+            </div>
+            <div class="input-group">
+                <label for="password">Password<span class="required">*</span></label>
+                <i class="fas fa-lock"></i>
+                <input type="password" class="input-field" id="password" required>
+                <div class="password-requirements" id="passwordRequirements">
+                    <div>Password Requirements:</div>
+                    <ul>
+                        <li id="reqCapital"><i class="fas fa-circle"></i> Start with a capital letter</li>
+                        <li id="reqLength"><i class="fas fa-circle"></i> At least 8 characters long</li>
+                        <li id="reqSpecial"><i class="fas fa-circle"></i> Exactly one special character</li>
+                        <li id="reqAlphaNum"><i class="fas fa-circle"></i> Contains both letters and numbers</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="input-group">
+                <label for="confirmPassword">Confirm Password<span class="required">*</span></label>
+                <i class="fas fa-lock"></i>
+                <input type="password" class="input-field" id="confirmPassword" required>
+            </div>
+            <div class="error-message" id="errorMessage"></div>
+            <button type="submit" class="register-btn">Register</button>
+            <p class="login-link">
+                Already have an account? <a href="login.html">Login Now</a>
+            </p>
+        </form>
+    </div>
+    <script src="register.js"></script>
+</body>
+</html> 
